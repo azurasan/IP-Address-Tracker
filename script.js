@@ -2,7 +2,6 @@ import {
     API_KEY,
     ACCESS_TOKEN
 } from "./secret.js";
-// import ACCESS_TOKEN from "./secret.js";
 
 const input = document.querySelector('input');
 const btn = document.querySelector('button');
@@ -11,9 +10,7 @@ const resultLocation = document.querySelector('.result-location');
 const resultTimezone = document.querySelector('.result-timezone');
 const resultISP = document.querySelector('.result-isp');
 const apiKey = API_KEY;
-// const apiKey = 'at_YgsRaC0dg8vDzy3vTPe0dX6fUUDEs';
 const accessToken = ACCESS_TOKEN;
-// const accessToken = 'pk.eyJ1IjoibXJpdmFuIiwiYSI6ImNra3YzeDRyeTE2eXEydm9panQzNWFuamQifQ.OiklG6yxFivBONPOvOPwbw';
 let map;
 let marker;
 
