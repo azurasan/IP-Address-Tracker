@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 100vh;
+    font-size: 18px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    background-image: url(images/pattern-bg.png);
+}
+
+header h1 {
+    color: white;
+    padding: 2rem 0;
+}
+
+
+input {
+    outline: none;
+    width: 25rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+
+button {
+    padding: 1.7rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+    background: hsl(0, 0%, 17%) url(images/icon-arrow.svg) no-repeat center;
+    transform: translate(-2.7rem, -0.3rem);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+button:hover,
+button:active {
+    background-color: rgb(197, 5, 47);
+}
+
+.result {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: left;
+    max-width: 85%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    transform: translateY(-3rem);
+    font-weight: 700;
+}
+
+.ip-address,
+.location,
+.timezone,
+.isp {
+    flex: 1;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+}
+
+.ip-address,
+.location,
+.timezone {
+    border-right: 1px solid hsl(0, 0%, 59%);
+}
+
+.ip,
+.lctn,
+.tmz,
+.isp2 {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 59%);
+}
+
+.result-ip,
+.result-isp,
+.result-timezone,
+.result-location {
+    font-size: 1.5em;
+    color: hsl(0, 0%, 17%);
+}
+
+#map {
+    width: 100%;
+    height: 26rem;
+}
+
+@media only screen and (max-width:600px) {
+    header h1 {
+        font-size: 1.5em;
+        color: white;
+        padding: 1rem 0;
+    }
+
+    .result {
+        display: block;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .ip-address,
+    .location,
+    .timezone {
+        border-right: 0;
+    }
+
+    input {
+        width: 18rem;
+    }
+
+    button {
+        padding: 1.5rem;
+        transform: translate(-1rem, -0.3rem);
+    }
+
+    .ip-address,
+    .location,
+    .timezone,
+    .isp {
+        padding: 0.5rem;
+    }
+
+    .ip,
+    .lctn,
+    .tmz,
+    .isp2 {
+        margin-bottom: 0.3rem;
+        font-size: 0.8em;
+    }
+
+    .result-ip,
+    .result-isp,
+    .result-timezone,
+    .result-location {
+        font-size: 1em;
+        color: hsl(0, 0%, 17%);
+    }
+
+    #map {
+        width: 100%;
+        height: 30rem;
+    }
+
+
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+
+
+    .ip-address,
+    .location,
+    .timezone,
+    .isp {
+        padding: 0.5rem;
+    }
+
+    .ip,
+    .lctn,
+    .tmz,
+    .isp2 {
+        margin-bottom: 0.3rem;
+        font-size: 1em;
+    }
+
+    .result-ip,
+    .result-isp,
+    .result-timezone,
+    .result-location {
+        overflow-wrap: break-word;
+        font-size: 1em;
+        color: hsl(0, 0%, 17%);
+    }
+}
